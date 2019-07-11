@@ -1,17 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledButton = styled.button`
+export default styled(Button)`
   font-size: ${props => props.theme.fontSize || '1.5rem'};
   text-align: center;
   color: black;
 `;
 
-function Button({ value, ...props}) {
+function Button({ value, className, ...props}) {
   return (
-    <StyledButton {...props}>{value}</StyledButton>
+    <button className={className} {...props}>{value}</button>
   )
 }
-
-export default Button
-
